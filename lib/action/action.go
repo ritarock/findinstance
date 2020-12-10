@@ -26,6 +26,7 @@ func Run(profile, instanceName string) {
 		for _, tag := range foundInstance.Tags {
 			fmt.Printf("  Key: %v\n", *tag.Key)
 			fmt.Printf("  Value: %v\n", *tag.Value)
+			fmt.Printf("==")
 		}
 	}
 }
