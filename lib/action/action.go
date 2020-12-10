@@ -14,18 +14,18 @@ func Run(profile, instanceName string) {
 	if foundInstance == nil {
 		fmt.Println("Instances not found")
 	} else {
-		fmt.Printf(" [LaunchTime]\n")
+		fmt.Printf("==LaunchTime==\n")
 		fmt.Printf("  %v\n", *foundInstance.LaunchTime)
-		fmt.Printf(" [State]\n")
+		fmt.Printf("==State==\n")
 		fmt.Printf("  %v\n", *foundInstance.State.Name)
-		fmt.Printf(" [PrivateIpAddress]\n")
+		fmt.Printf("==PrivateIpAddress==\n")
 		fmt.Printf("  %v\n", *foundInstance.NetworkInterfaces[0].PrivateIpAddress)
-		fmt.Printf(" [AvailabilityZone]\n")
+		fmt.Printf("==AvailabilityZone==\n")
 		fmt.Printf("  %v\n", *foundInstance.Placement.AvailabilityZone)
-		fmt.Printf(" [TAGS]\n")
+		fmt.Printf("==TAGS==\n")
 		for _, tag := range foundInstance.Tags {
-			fmt.Printf("  [%v]\n", *tag.Key)
-			fmt.Printf("   %v\n", *tag.Value)
+			fmt.Printf("  Key: %v\n", *tag.Key)
+			fmt.Printf("  Value: %v\n", *tag.Value)
 		}
 	}
 }
