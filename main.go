@@ -20,8 +20,8 @@ func main() {
 			&cli.StringFlag{
 				Name:        "profile",
 				Usage:       "set aws profile",
+				Value:       "default",
 				Destination: &profile,
-				Required:    true,
 			},
 		},
 		Action: func(c *cli.Context) error {
