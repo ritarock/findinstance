@@ -22,6 +22,8 @@ func Run(profile, instanceName string) {
 		fmt.Printf("  %v\n", *foundInstance.NetworkInterfaces[0].PrivateIpAddress)
 		fmt.Printf("==AvailabilityZone==\n")
 		fmt.Printf("  %v\n", *foundInstance.Placement.AvailabilityZone)
+		fmt.Printf("==InstanceType==\n")
+		fmt.Printf("  %v\n", *foundInstance.InstanceType)
 		fmt.Printf("==TAGS==\n")
 		for _, tag := range foundInstance.Tags {
 			fmt.Printf("  Key: %v\n", *tag.Key)
