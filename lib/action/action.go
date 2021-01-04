@@ -24,11 +24,11 @@ func Run(profile, instanceName string) {
 		fmt.Printf("└──%v\n", *foundInstance.Placement.AvailabilityZone)
 		fmt.Printf("InstanceType\n")
 		fmt.Printf("└──%v\n", *foundInstance.InstanceType)
-		fmt.Printf("==TAGS==\n")
+		fmt.Printf("TAGS\n")
 		for _, tag := range foundInstance.Tags {
-			fmt.Printf("  Key: %v\n", *tag.Key)
-			fmt.Printf("  Value: %v\n", *tag.Value)
-			fmt.Printf("└──\n")
+			fmt.Printf("└──Key: %v\n", *tag.Key)
+			fmt.Printf("└──Value: %v\n", *tag.Value)
+			fmt.Printf("\n")
 		}
 	}
 }
